@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>winson-consul</module>
-        <module>winson-eureka</module>
+<!--        <module>winson-eureka</module>-->
         <module>winson-eureka-client</module>
     </modules>
 
