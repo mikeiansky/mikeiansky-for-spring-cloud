@@ -1,14 +1,11 @@
 package com.winson.eureka;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 //import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.ConfigurableApplicationContext;
-
-import java.util.concurrent.CountDownLatch;
 
 /**
  * @author winson
@@ -16,11 +13,11 @@ import java.util.concurrent.CountDownLatch;
  **/
 @SpringBootApplication
 @EnableEurekaServer
-public class WinsonEurekaApp {
+public class WinsonEurekaServerApp {
 
     public static void main(String[] args) throws InterruptedException {
 
-        ConfigurableApplicationContext context = SpringApplication.run(WinsonEurekaApp.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(WinsonEurekaServerApp.class, args);
         System.out.println(context);
 
 //        CountDownLatch latch = new CountDownLatch(1);
