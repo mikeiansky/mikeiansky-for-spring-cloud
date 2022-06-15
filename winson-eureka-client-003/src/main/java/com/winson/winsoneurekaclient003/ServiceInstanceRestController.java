@@ -1,11 +1,11 @@
-package com.winson.winsoneurekaprovider002;
+package com.winson.winsoneurekaclient003;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import java.util.List;
  * @author winson
  * @date 2022/6/15
  **/
-@Controller
-public class EurekaClientController002 {
+@RestController
+class ServiceInstanceRestController {
 
     @Autowired
     private DiscoveryClient discoveryClient;
@@ -22,14 +22,6 @@ public class EurekaClientController002 {
     @RequestMapping("/service-instances/{applicationName}")
     public List<ServiceInstance> serviceInstancesByApplicationName(
             @PathVariable String applicationName) {
-        List<ServiceInstance> instanceList = this.discoveryClient.getInstances(applicationName);
-        System.out.println(" serviceInstancesByApplicationName applicationName : " + applicationName + " , instanceList : " + instanceList);
-        return instanceList;
+        return this.discoveryClient.getInstances(applicationName);
     }
-
-    @RequestMapping("/provider/second/msg")
-    public void providerService() {
-        System.out.println(" provider service two invoke ...... ");
-    }
-
 }

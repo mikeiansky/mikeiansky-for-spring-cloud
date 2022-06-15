@@ -1,4 +1,4 @@
-package com.winson.winsoneurekaprovider002;
+package com.winson.winsoneurekaclient002;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

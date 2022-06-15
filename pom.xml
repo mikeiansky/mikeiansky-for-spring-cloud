@@ -11,7 +11,7 @@
     <modules>
         <module>winson-consul</module>
 <!--        <module>winson-eureka</module>-->
-        <module>winson-eureka-client</module>
+<!--        <module>winson-eureka-client</module>-->
     </modules>
 
     <properties>

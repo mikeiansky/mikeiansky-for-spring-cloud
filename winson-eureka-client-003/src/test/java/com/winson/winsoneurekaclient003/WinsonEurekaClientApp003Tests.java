@@ -1,10 +1,10 @@
-package com.winson.winsoneurekaprovider002;
+package com.winson.winsoneurekaclient003;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WinsonEurekaProvider002ApplicationTests {
+class WinsonEurekaClientApp003Tests {
 
     @Test
     void contextLoads() {
