@@ -1,4 +1,4 @@
-package com.winson.springcloudapp003;
+package com.winson.winsonspringcloudappz;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author winson
  * @date 2022/6/15
  **/
-@FeignClient("WINSON-EUREKA-CLIENT-001")
-public interface OpenFeignClientForApp001 {
+@FeignClient("winson-cloud-app-001")
+public interface OpenFeignClientForAppZ {
 
     @LoadBalanced
     @RequestMapping(method = RequestMethod.GET, value="/hello")

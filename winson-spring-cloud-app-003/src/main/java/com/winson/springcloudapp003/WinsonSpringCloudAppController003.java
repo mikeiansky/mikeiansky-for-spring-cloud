@@ -23,11 +23,26 @@ public class WinsonSpringCloudAppController003 {
 
     private AtomicInteger index = new AtomicInteger();
 
-    @GetMapping("/thrid/hello")
-    public void delegateHello(){
+    @GetMapping("/hello")
+    public String sayHello(){
+        int id = index.incrementAndGet();
+        System.out.println("app 003 hello invoke start ... " + id);
+//        CountDownLatch latch = new CountDownLatch(1);
+//        try {
+//            latch.await();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        System.out.println("app 003 hello invoke complete ... " + id);
+        return "app-003";
+    }
+
+    @GetMapping("/third/hello")
+    public String delegateHello(){
         System.out.println("openFeignClient003 : " + openFeignClientForApp001);
-        openFeignClientForApp001.sayHello();
-        System.out.println(" delegate third hello invoke ... ");
+        String result = openFeignClientForApp001.sayHello();
+        System.out.println(" delegate third hello invoke ... result : " + result);
+        return result;
     }
 
     @CircuitBreaker(name = "winson")
