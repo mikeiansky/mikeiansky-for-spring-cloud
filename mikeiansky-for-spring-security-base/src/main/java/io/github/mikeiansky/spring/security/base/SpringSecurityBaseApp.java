@@ -15,9 +15,9 @@ public class SpringSecurityBaseApp {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = SpringApplication.run(SpringSecurityBaseApp.class, args);
-        HelloMessageService helloMessageService = applicationContext.getBean(HelloMessageService.class);
-        String result = helloMessageService.getMessage();
-        System.out.println("hello message: " + result);
+//        HelloMessageService helloMessageService = applicationContext.getBean(HelloMessageService.class);
+//        String result = helloMessageService.getMessage();
+//        System.out.println("hello message: " + result);
     }
 
 }
